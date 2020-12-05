@@ -1,31 +1,39 @@
 # MyShell-lunix
 
-#h2 Running Shell
+## Running Shell
 
-Files included in the Shell program:
+Open Terminal in current folder and run make.
 
-Main.c : It takes the input line from stdin and divide mulitple commands into strings. Then each command is identified and respective function is called.
+> make
 
-Header.h : Include all header files require for respective function.
+This will create an excutable file shell. Now just run it.
 
-Prompt.c : This file uses syscommands & struct gethostname(), struct passwd , getpwuid() to output username and hostname. Also the current directory address is passed with pointer.
+> ./shell
 
-Cd.c : The file uses commands chdir(), getcwd() to change address of cur_directory and also rewrite address string required for prompt.
+## Files included in the Shell program:
 
-Pwd.c : This file uses getcwd to get current address.
+*Main.c : It takes the input line from stdin and divide mulitple commands into strings. Then each command is identified and respective function is called.
 
-Echo.c : It prints the input string to stdout similar to echo
+*Header.h : Include all header files require for respective function.
 
-Pinfo.c : It prints information about a pid which is present in /proc/[pid]/ and it also uses read(), open() ,readlink() ,close() to get the info.
+*Prompt.c : This file uses syscommands & struct gethostname(), struct passwd , getpwuid() to output username and hostname. Also the current directory address is passed with pointer.
 
-Syscmd.c : it exectes the system command using fork(),execvp(),wait().
+*Cd.c : The file uses commands chdir(), getcwd() to change address of cur_directory and also rewrite address string required for prompt.
 
-History.c : It stores the commands written in shell in myshell_his.txt (atmax 20 commands). it outputs last n(max 10) commands exeuted by shell.
+*Pwd.c : This file uses getcwd to get current address.
 
-Redir.c : handles redirection and calls the imple to implement the command.
+*Echo.c : It prints the input string to stdout similar to echo
 
-Pipe.c : Creates the pipe between to commands and calls redir for redirection handling.
+*Pinfo.c : It prints information about a pid which is present in /proc/[pid]/ and it also uses read(), open() ,readlink() ,close() to get the info.
 
-Envar.c : It has two functions setenv and unsetenv . These will set enviroment variable and unset it.
+*Syscmd.c : it exectes the system command using fork(),execvp(),wait().
 
-Jobs.c : it will display all background processes. It also has kjob , fg , bg and overkill functions in it.
+*History.c : It stores the commands written in shell in myshell_his.txt (atmax 20 commands). it outputs last n(max 10) commands exeuted by shell.
+
+*Redir.c : handles redirection and calls the imple to implement the command.
+
+*Pipe.c : Creates the pipe between to commands and calls redir for redirection handling.
+
+*Envar.c : It has two functions setenv and unsetenv . These will set enviroment variable and unset it.
+
+*Jobs.c : it will display all background processes. It also has kjob , fg , bg and overkill functions in it.
