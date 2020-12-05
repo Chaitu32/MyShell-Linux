@@ -1,4 +1,4 @@
-# MyShell-lunix
+# MyShell-Lunix
 
 ## Running Shell
 
